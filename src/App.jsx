@@ -412,6 +412,11 @@ export default function App() {
               </a>
             </div>
             <div className="footer-contact-item">
+              <a href="https://tiktok.com/@broderieouazzane" target="_blank" rel="noreferrer" style={{display: 'flex', alignItems: 'center', gap: '10px', color: 'inherit'}}>
+                <TikTokIcon /> <span>@broderieouazzane</span>
+              </a>
+            </div>
+            <div className="footer-contact-item">
               <a href="https://wa.me/212694569123" target="_blank" rel="noreferrer" style={{display: 'flex', alignItems: 'center', gap: '10px', color: 'inherit'}}>
                 <WhatsAppOfficialIcon /> <span>0694569123</span>
               </a>
