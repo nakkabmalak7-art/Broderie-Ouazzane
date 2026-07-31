@@ -1,0 +1,27 @@
+﻿[
+    {
+        "title":  "Caftans",
+        "img":  "/images/categories/caftans/caftan.png",
+        "id":  "caftans"
+    },
+    {
+        "title":  "Djellabas",
+        "img":  "/images/categories/djellabas/djellaba.png",
+        "id":  "djellabas"
+    },
+    {
+        "title":  "Coussins",
+        "img":  "/images/categories/coussins/cushion.png",
+        "id":  "coussins"
+    },
+    {
+        "title":  "Nappes",
+        "img":  "/images/categories/nappes/tablecloth.png",
+        "id":  "nappes"
+    },
+    {
+        "title":  "Broderie sur mesure",
+        "img":  "/images/categories/sur-mesure/custom.png",
+        "id":  "sur-mesure"
+    }
+]

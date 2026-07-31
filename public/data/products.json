@@ -1,0 +1,302 @@
+﻿[
+    {
+        "id":  "caf-1",
+        "thumbs":  [
+                       "/images/products/caf-1/thumb_1.png",
+                       "/images/products/caf-1/thumb_2.png",
+                       "/images/products/caf-1/thumb_3.png",
+                       "/images/products/caf-1/thumb_4.png"
+                   ],
+        "title":  "Caftan Royal",
+        "price":  "1200 DH",
+        "description":  "Cette création est confectionnée avec un tissu de haute qualité et une broderie artisanale réalisée à la main.\nSon design élégant convient aussi bien aux occasions spéciales qu\u0027au quotidien.",
+        "ref":  "CAF-2024-001",
+        "img":  "/images/products/caf-1/img.png",
+        "category_id":  "caftans"
+    },
+    {
+        "id":  "caf-2",
+        "thumbs":  [
+                       "/images/products/caf-2/thumb_1.png",
+                       "/images/products/caf-2/thumb_2.png",
+                       "/images/products/caf-2/thumb_3.png",
+                       "/images/products/caf-2/thumb_4.png"
+                   ],
+        "title":  "Caftan Moderne",
+        "price":  "950 DH",
+        "description":  "Cette création est confectionnée avec un tissu de haute qualité et une broderie artisanale réalisée à la main.\nSon design élégant convient aussi bien aux occasions spéciales qu\u0027au quotidien.",
+        "ref":  "CAF-2024-002",
+        "img":  "/images/products/caf-2/img.png",
+        "category_id":  "caftans"
+    },
+    {
+        "id":  "caf-3",
+        "thumbs":  [
+                       "/images/products/caf-3/thumb_1.png",
+                       "/images/products/caf-3/thumb_2.png",
+                       "/images/products/caf-3/thumb_3.png",
+                       "/images/products/caf-3/thumb_4.png"
+                   ],
+        "title":  "Caftan Élégant",
+        "price":  "1100 DH",
+        "description":  "Cette création est confectionnée avec un tissu de haute qualité et une broderie artisanale réalisée à la main.\nSon design élégant convient aussi bien aux occasions spéciales qu\u0027au quotidien.",
+        "ref":  "CAF-2024-003",
+        "img":  "/images/products/caf-3/img.png",
+        "category_id":  "caftans"
+    },
+    {
+        "id":  "caf-4",
+        "thumbs":  [
+                       "/images/products/caf-4/thumb_1.png",
+                       "/images/products/caf-4/thumb_2.png",
+                       "/images/products/caf-4/thumb_3.png",
+                       "/images/products/caf-4/thumb_4.png"
+                   ],
+        "title":  "Caftan Traditionnel",
+        "price":  "1350 DH",
+        "description":  "Cette création est confectionnée avec un tissu de haute qualité et une broderie artisanale réalisée à la main.\nSon design élégant convient aussi bien aux occasions spéciales qu\u0027au quotidien.",
+        "ref":  "CAF-2024-004",
+        "img":  "/images/products/caf-4/img.png",
+        "category_id":  "caftans"
+    },
+    {
+        "id":  "djl-1",
+        "thumbs":  [
+                       "/images/products/djl-1/thumb_1.png",
+                       "/images/products/djl-1/thumb_2.png",
+                       "/images/products/djl-1/thumb_3.png",
+                       "/images/products/djl-1/thumb_4.png"
+                   ],
+        "title":  "Djellaba Moderne Brodée",
+        "price":  "850 DH",
+        "description":  "Cette création est confectionnée avec un tissu de haute qualité et une broderie artisanale réalisée à la main.\nSon design élégant convient aussi bien aux occasions spéciales qu\u0027au quotidien.",
+        "ref":  "DJL-2024-015",
+        "img":  "/images/products/djl-1/img.png",
+        "category_id":  "djellabas"
+    },
+    {
+        "id":  "djl-2",
+        "thumbs":  [
+                       "/images/products/djl-2/thumb_1.png",
+                       "/images/products/djl-2/thumb_2.png",
+                       "/images/products/djl-2/thumb_3.png",
+                       "/images/products/djl-2/thumb_4.png"
+                   ],
+        "title":  "Djellaba Bleue Brodée",
+        "price":  "750 DH",
+        "description":  "Cette création est confectionnée avec un tissu de haute qualité et une broderie artisanale réalisée à la main.\nSon design élégant convient aussi bien aux occasions spéciales qu\u0027au quotidien.",
+        "ref":  "DJL-2024-016",
+        "img":  "/images/products/djl-2/img.png",
+        "category_id":  "djellabas"
+    },
+    {
+        "id":  "djl-3",
+        "thumbs":  [
+                       "/images/products/djl-3/thumb_1.png",
+                       "/images/products/djl-3/thumb_2.png",
+                       "/images/products/djl-3/thumb_3.png",
+                       "/images/products/djl-3/thumb_4.png"
+                   ],
+        "title":  "Djellaba Verte Moderne",
+        "price":  "800 DH",
+        "description":  "Cette création est confectionnée avec un tissu de haute qualité et une broderie artisanale réalisée à la main.\nSon design élégant convient aussi bien aux occasions spéciales qu\u0027au quotidien.",
+        "ref":  "DJL-2024-017",
+        "img":  "/images/products/djl-3/img.png",
+        "category_id":  "djellabas"
+    },
+    {
+        "id":  "djl-4",
+        "thumbs":  [
+                       "/images/products/djl-4/thumb_1.png",
+                       "/images/products/djl-4/thumb_2.png",
+                       "/images/products/djl-4/thumb_3.png",
+                       "/images/products/djl-4/thumb_4.png"
+                   ],
+        "title":  "Djellaba Blanche Brodée",
+        "price":  "900 DH",
+        "description":  "Cette création est confectionnée avec un tissu de haute qualité et une broderie artisanale réalisée à la main.\nSon design élégant convient aussi bien aux occasions spéciales qu\u0027au quotidien.",
+        "ref":  "DJL-2024-018",
+        "img":  "/images/products/djl-4/img.png",
+        "category_id":  "djellabas"
+    },
+    {
+        "id":  "csl-1",
+        "thumbs":  [
+                       "/images/products/csl-1/thumb_1.png",
+                       "/images/products/csl-1/thumb_2.png",
+                       "/images/products/csl-1/thumb_3.png",
+                       "/images/products/csl-1/thumb_4.png"
+                   ],
+        "title":  "Coussin Brodé Or",
+        "price":  "150 DH",
+        "description":  "Cette création est confectionnée avec un tissu de haute qualité et une broderie artisanale réalisée à la main.\nSon design élégant convient aussi bien aux occasions spéciales qu\u0027au quotidien.",
+        "ref":  "CSL-2024-001",
+        "img":  "/images/products/csl-1/img.png",
+        "category_id":  "coussins"
+    },
+    {
+        "id":  "csl-2",
+        "thumbs":  [
+                       "/images/products/csl-2/thumb_1.png",
+                       "/images/products/csl-2/thumb_2.png",
+                       "/images/products/csl-2/thumb_3.png",
+                       "/images/products/csl-2/thumb_4.png"
+                   ],
+        "title":  "Coussin Royal",
+        "price":  "200 DH",
+        "description":  "Cette création est confectionnée avec un tissu de haute qualité et une broderie artisanale réalisée à la main.\nSon design élégant convient aussi bien aux occasions spéciales qu\u0027au quotidien.",
+        "ref":  "CSL-2024-002",
+        "img":  "/images/products/csl-2/img.png",
+        "category_id":  "coussins"
+    },
+    {
+        "id":  "csl-3",
+        "thumbs":  [
+                       "/images/products/csl-3/thumb_1.png",
+                       "/images/products/csl-3/thumb_2.png",
+                       "/images/products/csl-3/thumb_3.png",
+                       "/images/products/csl-3/thumb_4.png"
+                   ],
+        "title":  "Coussin Velours",
+        "price":  "180 DH",
+        "description":  "Cette création est confectionnée avec un tissu de haute qualité et une broderie artisanale réalisée à la main.\nSon design élégant convient aussi bien aux occasions spéciales qu\u0027au quotidien.",
+        "ref":  "CSL-2024-003",
+        "img":  "/images/products/csl-3/img.png",
+        "category_id":  "coussins"
+    },
+    {
+        "id":  "csl-4",
+        "thumbs":  [
+                       "/images/products/csl-4/thumb_1.png",
+                       "/images/products/csl-4/thumb_2.png",
+                       "/images/products/csl-4/thumb_3.png",
+                       "/images/products/csl-4/thumb_4.png"
+                   ],
+        "title":  "Coussin Moderne",
+        "price":  "160 DH",
+        "description":  "Cette création est confectionnée avec un tissu de haute qualité et une broderie artisanale réalisée à la main.\nSon design élégant convient aussi bien aux occasions spéciales qu\u0027au quotidien.",
+        "ref":  "CSL-2024-004",
+        "img":  "/images/products/csl-4/img.png",
+        "category_id":  "coussins"
+    },
+    {
+        "id":  "nap-1",
+        "thumbs":  [
+                       "/images/products/nap-1/thumb_1.png",
+                       "/images/products/nap-1/thumb_2.png",
+                       "/images/products/nap-1/thumb_3.png",
+                       "/images/products/nap-1/thumb_4.png"
+                   ],
+        "title":  "Nappe Florale",
+        "price":  "450 DH",
+        "description":  "Cette création est confectionnée avec un tissu de haute qualité et une broderie artisanale réalisée à la main.\nSon design élégant convient aussi bien aux occasions spéciales qu\u0027au quotidien.",
+        "ref":  "NAP-2024-001",
+        "img":  "/images/products/nap-1/img.png",
+        "category_id":  "nappes"
+    },
+    {
+        "id":  "nap-2",
+        "thumbs":  [
+                       "/images/products/nap-2/thumb_1.png",
+                       "/images/products/nap-2/thumb_2.png",
+                       "/images/products/nap-2/thumb_3.png",
+                       "/images/products/nap-2/thumb_4.png"
+                   ],
+        "title":  "Nappe Blanche Brodée",
+        "price":  "550 DH",
+        "description":  "Cette création est confectionnée avec un tissu de haute qualité et une broderie artisanale réalisée à la main.\nSon design élégant convient aussi bien aux occasions spéciales qu\u0027au quotidien.",
+        "ref":  "NAP-2024-002",
+        "img":  "/images/products/nap-2/img.png",
+        "category_id":  "nappes"
+    },
+    {
+        "id":  "nap-3",
+        "thumbs":  [
+                       "/images/products/nap-3/thumb_1.png",
+                       "/images/products/nap-3/thumb_2.png",
+                       "/images/products/nap-3/thumb_3.png",
+                       "/images/products/nap-3/thumb_4.png"
+                   ],
+        "title":  "Nappe Royale",
+        "price":  "600 DH",
+        "description":  "Cette création est confectionnée avec un tissu de haute qualité et une broderie artisanale réalisée à la main.\nSon design élégant convient aussi bien aux occasions spéciales qu\u0027au quotidien.",
+        "ref":  "NAP-2024-003",
+        "img":  "/images/products/nap-3/img.png",
+        "category_id":  "nappes"
+    },
+    {
+        "id":  "nap-4",
+        "thumbs":  [
+                       "/images/products/nap-4/thumb_1.png",
+                       "/images/products/nap-4/thumb_2.png",
+                       "/images/products/nap-4/thumb_3.png",
+                       "/images/products/nap-4/thumb_4.png"
+                   ],
+        "title":  "Nappe Traditionnelle",
+        "price":  "400 DH",
+        "description":  "Cette création est confectionnée avec un tissu de haute qualité et une broderie artisanale réalisée à la main.\nSon design élégant convient aussi bien aux occasions spéciales qu\u0027au quotidien.",
+        "ref":  "NAP-2024-004",
+        "img":  "/images/products/nap-4/img.png",
+        "category_id":  "nappes"
+    },
+    {
+        "id":  "sur-1",
+        "thumbs":  [
+                       "/images/products/sur-1/thumb_1.png",
+                       "/images/products/sur-1/thumb_2.png",
+                       "/images/products/sur-1/thumb_3.png",
+                       "/images/products/sur-1/thumb_4.png"
+                   ],
+        "title":  "Fils d\u0027Or sur commande",
+        "price":  "Sur devis",
+        "description":  "Cette création est confectionnée avec un tissu de haute qualité et une broderie artisanale réalisée à la main.\nSon design élégant convient aussi bien aux occasions spéciales qu\u0027au quotidien.",
+        "ref":  "SUR-2024-001",
+        "img":  "/images/products/sur-1/img.png",
+        "category_id":  "sur-mesure"
+    },
+    {
+        "id":  "sur-2",
+        "thumbs":  [
+                       "/images/products/sur-2/thumb_1.png",
+                       "/images/products/sur-2/thumb_2.png",
+                       "/images/products/sur-2/thumb_3.png",
+                       "/images/products/sur-2/thumb_4.png"
+                   ],
+        "title":  "Personnalisation logo",
+        "price":  "Sur devis",
+        "description":  "Cette création est confectionnée avec un tissu de haute qualité et une broderie artisanale réalisée à la main.\nSon design élégant convient aussi bien aux occasions spéciales qu\u0027au quotidien.",
+        "ref":  "SUR-2024-002",
+        "img":  "/images/products/sur-2/img.png",
+        "category_id":  "sur-mesure"
+    },
+    {
+        "id":  "sur-3",
+        "thumbs":  [
+                       "/images/products/sur-3/thumb_1.png",
+                       "/images/products/sur-3/thumb_2.png",
+                       "/images/products/sur-3/thumb_3.png",
+                       "/images/products/sur-3/thumb_4.png"
+                   ],
+        "title":  "Broderie Initiale",
+        "price":  "Sur devis",
+        "description":  "Cette création est confectionnée avec un tissu de haute qualité et une broderie artisanale réalisée à la main.\nSon design élégant convient aussi bien aux occasions spéciales qu\u0027au quotidien.",
+        "ref":  "SUR-2024-003",
+        "img":  "/images/products/sur-3/img.png",
+        "category_id":  "sur-mesure"
+    },
+    {
+        "id":  "sur-4",
+        "thumbs":  [
+                       "/images/products/sur-4/thumb_1.png",
+                       "/images/products/sur-4/thumb_2.png",
+                       "/images/products/sur-4/thumb_3.png",
+                       "/images/products/sur-4/thumb_4.png"
+                   ],
+        "title":  "Fils d\u0027Argent",
+        "price":  "Sur devis",
+        "description":  "Cette création est confectionnée avec un tissu de haute qualité et une broderie artisanale réalisée à la main.\nSon design élégant convient aussi bien aux occasions spéciales qu\u0027au quotidien.",
+        "ref":  "SUR-2024-004",
+        "img":  "/images/products/sur-4/img.png",
+        "category_id":  "sur-mesure"
+    }
+]

@@ -1,0 +1,53 @@
+{
+  "uploads_path": "public/images/products",
+  "collections": [
+    {
+      "name": "Settings",
+      "file": "public/data/settings.json",
+      "type": "object",
+      "fields": [
+        { "name": "hero_heading", "type": "string", "label": "Hero Heading", "required": true },
+        { "name": "hero_subheading", "type": "text", "label": "Hero Subheading", "rows": 3 },
+        { "name": "hero_image", "type": "image", "label": "Hero Image", "path_strategy": "flat", "upload_path": "public/images/settings" },
+        { "name": "whatsapp_number", "type": "string", "label": "WhatsApp Number" },
+        { "name": "phone_number", "type": "string", "label": "Phone Number" },
+        { "name": "instagram_handle", "type": "string", "label": "Instagram Handle" },
+        { "name": "instagram_link", "type": "string", "label": "Instagram Link" },
+        { "name": "tiktok_handle", "type": "string", "label": "TikTok Handle" },
+        { "name": "tiktok_link", "type": "string", "label": "TikTok Link" },
+        { "name": "location", "type": "string", "label": "Location Text" },
+        { "name": "cta_heading", "type": "string", "label": "CTA Heading" },
+        { "name": "cta_text", "type": "text", "label": "CTA Text", "rows": 2 },
+        { "name": "cta_image", "type": "image", "label": "CTA Image", "path_strategy": "flat", "upload_path": "public/images/settings" },
+        { "name": "maps_link", "type": "string", "label": "Google Maps Link" }
+      ]
+    },
+    {
+      "name": "Categories",
+      "file": "public/data/categories.json",
+      "type": "array",
+      "id_field": "id",
+      "fields": [
+        { "name": "id", "type": "string", "label": "ID", "required": true },
+        { "name": "title", "type": "string", "label": "Category Title", "required": true },
+        { "name": "img", "type": "image", "label": "Category Image", "path_strategy": "custom", "upload_path": "public/images/categories" }
+      ]
+    },
+    {
+      "name": "Products",
+      "file": "public/data/products.json",
+      "type": "array",
+      "id_field": "id",
+      "fields": [
+        { "name": "id", "type": "string", "label": "ID", "required": true },
+        { "name": "category_id", "type": "string", "label": "Category ID", "required": true },
+        { "name": "title", "type": "string", "label": "Title", "required": true },
+        { "name": "ref", "type": "string", "label": "Reference" },
+        { "name": "price", "type": "string", "label": "Price" },
+        { "name": "description", "type": "text", "label": "Description", "rows": 4 },
+        { "name": "img", "type": "image", "label": "Main Image" },
+        { "name": "thumbs", "type": "image_array", "label": "Gallery Images" }
+      ]
+    }
+  ]
+}

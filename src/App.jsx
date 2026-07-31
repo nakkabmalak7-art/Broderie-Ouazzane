@@ -1,5 +1,6 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './index.css';
+import { FiExternalLink } from 'react-icons/fi';
 
 // --- ICONS ---
 const PhoneIcon = () => <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>;
@@ -21,68 +22,29 @@ const ScissorsIcon = () => <svg width="16" height="16" viewBox="0 0 24 24" fill=
 const FabricIcon = () => <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>;
 const RulerIcon = () => <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><line x1="2" y1="12" x2="22" y2="12"></line><line x1="6" y1="12" x2="6" y2="16"></line><line x1="10" y1="12" x2="10" y2="16"></line><line x1="14" y1="12" x2="14" y2="16"></line><line x1="18" y1="12" x2="18" y2="16"></line></svg>;
 
-// --- DATA ---
-const categoriesData = [
-  { 
-    id: 'caftans', 
-    img: "caftan_1785360256452.png", 
-    title: "Caftans", 
-    products: [
-      { id: 'caf-1', title: "Caftan Royal", ref: "CAF-2024-001", price: "1200 DH", img: "caftan_1785360256452.png", thumbs: ["caftan_1785360256452.png", "caftan_1785360256452.png", "caftan_1785360256452.png", "caftan_1785360256452.png"] },
-      { id: 'caf-2', title: "Caftan Moderne", ref: "CAF-2024-002", price: "950 DH", img: "caftan_1785360256452.png", thumbs: ["caftan_1785360256452.png", "caftan_1785360256452.png", "caftan_1785360256452.png", "caftan_1785360256452.png"] },
-      { id: 'caf-3', title: "Caftan Élégant", ref: "CAF-2024-003", price: "1100 DH", img: "caftan_1785360256452.png", thumbs: ["caftan_1785360256452.png", "caftan_1785360256452.png", "caftan_1785360256452.png", "caftan_1785360256452.png"] },
-      { id: 'caf-4', title: "Caftan Traditionnel", ref: "CAF-2024-004", price: "1350 DH", img: "caftan_1785360256452.png", thumbs: ["caftan_1785360256452.png", "caftan_1785360256452.png", "caftan_1785360256452.png", "caftan_1785360256452.png"] },
-    ]
-  },
-  { 
-    id: 'djellabas', 
-    img: "djellaba_1785360268335.png", 
-    title: "Djellabas", 
-    products: [
-      { id: 'djl-1', title: "Djellaba Moderne Brodée", ref: "DJL-2024-015", price: "850 DH", img: "djellaba_1785360268335.png", thumbs: ["djellaba_1785360268335.png", "djellaba_1785360268335.png", "djellaba_1785360268335.png", "djellaba_1785360268335.png"] },
-      { id: 'djl-2', title: "Djellaba Bleue Brodée", ref: "DJL-2024-016", price: "750 DH", img: "djellaba_1785360268335.png", thumbs: ["djellaba_1785360268335.png", "djellaba_1785360268335.png", "djellaba_1785360268335.png", "djellaba_1785360268335.png"] },
-      { id: 'djl-3', title: "Djellaba Verte Moderne", ref: "DJL-2024-017", price: "800 DH", img: "djellaba_1785360268335.png", thumbs: ["djellaba_1785360268335.png", "djellaba_1785360268335.png", "djellaba_1785360268335.png", "djellaba_1785360268335.png"] },
-      { id: 'djl-4', title: "Djellaba Blanche Brodée", ref: "DJL-2024-018", price: "900 DH", img: "djellaba_1785360268335.png", thumbs: ["djellaba_1785360268335.png", "djellaba_1785360268335.png", "djellaba_1785360268335.png", "djellaba_1785360268335.png"] },
-    ]
-  },
-  { 
-    id: 'coussins', 
-    img: "cushion_1785360277965.png", 
-    title: "Coussins", 
-    products: [
-      { id: 'csl-1', title: "Coussin Brodé Or", ref: "CSL-2024-001", price: "150 DH", img: "cushion_1785360277965.png", thumbs: ["cushion_1785360277965.png"] },
-      { id: 'csl-2', title: "Coussin Royal", ref: "CSL-2024-002", price: "200 DH", img: "cushion_1785360277965.png", thumbs: ["cushion_1785360277965.png"] },
-      { id: 'csl-3', title: "Coussin Velours", ref: "CSL-2024-003", price: "180 DH", img: "cushion_1785360277965.png", thumbs: ["cushion_1785360277965.png"] },
-      { id: 'csl-4', title: "Coussin Moderne", ref: "CSL-2024-004", price: "160 DH", img: "cushion_1785360277965.png", thumbs: ["cushion_1785360277965.png"] },
-    ]
-  },
-  { 
-    id: 'nappes', 
-    img: "tablecloth_1785360290005.png", 
-    title: "Nappes", 
-    products: [
-      { id: 'nap-1', title: "Nappe Florale", ref: "NAP-2024-001", price: "450 DH", img: "tablecloth_1785360290005.png", thumbs: ["tablecloth_1785360290005.png"] },
-      { id: 'nap-2', title: "Nappe Blanche Brodée", ref: "NAP-2024-002", price: "550 DH", img: "tablecloth_1785360290005.png", thumbs: ["tablecloth_1785360290005.png"] },
-      { id: 'nap-3', title: "Nappe Royale", ref: "NAP-2024-003", price: "600 DH", img: "tablecloth_1785360290005.png", thumbs: ["tablecloth_1785360290005.png"] },
-      { id: 'nap-4', title: "Nappe Traditionnelle", ref: "NAP-2024-004", price: "400 DH", img: "tablecloth_1785360290005.png", thumbs: ["tablecloth_1785360290005.png"] },
-    ]
-  },
-  { 
-    id: 'sur-mesure', 
-    img: "custom_embroidery_1785360299799.png", 
-    title: "Broderie sur mesure", 
-    products: [
-      { id: 'sur-1', title: "Fils d'Or sur commande", ref: "SUR-2024-001", price: "Sur devis", img: "custom_embroidery_1785360299799.png", thumbs: ["custom_embroidery_1785360299799.png"] },
-      { id: 'sur-2', title: "Personnalisation logo", ref: "SUR-2024-002", price: "Sur devis", img: "custom_embroidery_1785360299799.png", thumbs: ["custom_embroidery_1785360299799.png"] },
-      { id: 'sur-3', title: "Broderie Initiale", ref: "SUR-2024-003", price: "Sur devis", img: "custom_embroidery_1785360299799.png", thumbs: ["custom_embroidery_1785360299799.png"] },
-      { id: 'sur-4', title: "Fils d'Argent", ref: "SUR-2024-004", price: "Sur devis", img: "custom_embroidery_1785360299799.png", thumbs: ["custom_embroidery_1785360299799.png"] },
-    ]
-  }
-];
-
 export default function App() {
   const [selectedCategory, setSelectedCategory] = useState(null);
   const [selectedProduct, setSelectedProduct] = useState(null);
+  const [settingsData, setSettingsData] = useState({});
+  const [categoriesData, setCategoriesData] = useState([]);
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    Promise.all([
+      fetch('/data/settings.json').then(r => r.json()),
+      fetch('/data/categories.json').then(r => r.json()),
+      fetch('/data/products.json').then(r => r.json()),
+    ]).then(([settings, categories, products]) => {
+      setSettingsData(settings);
+      setCategoriesData(categories.map(cat => ({
+        ...cat,
+        products: products.filter(p => p.category_id === cat.id)
+      })));
+      setIsLoading(false);
+    });
+  }, []);
+
+  if (isLoading) return null;
 
   const scrollToSection = (e, id) => {
     e.preventDefault();
@@ -100,7 +62,7 @@ export default function App() {
 
   const openWhatsApp = (e, text) => {
     if (e) e.preventDefault();
-    window.open(`https://wa.me/212694569123?text=${encodeURIComponent(text)}`, '_blank');
+    window.open(`https://wa.me/${settingsData.whatsapp_number}?text=${encodeURIComponent(text)}`, '_blank');
   };
 
   const handleCategoryClick = (category) => {
@@ -171,11 +133,11 @@ export default function App() {
             <div className="product-gallery-elegant">
               <span className="badge-nouveau">Nouveau</span>
               <button className="slider-btn left"><ArrowLeftIcon /></button>
-              <img src={`/images/${selectedProduct.img}`} alt={selectedProduct.title} className="main-img-elegant" />
+              <img src={selectedProduct.img} alt={selectedProduct.title} className="main-img-elegant" />
               <button className="slider-btn right"><ArrowRightIcon /></button>
               <div className="thumbnails-elegant">
                 {selectedProduct.thumbs.map((thumb, idx) => (
-                  <img key={idx} src={`/images/${thumb}`} alt="thumb" className={`thumb-img ${idx === 0 ? 'active' : ''}`} />
+                  <img key={idx} src={thumb} alt="thumb" className={`thumb-img ${idx === 0 ? 'active' : ''}`} />
                 ))}
               </div>
             </div>
@@ -188,9 +150,8 @@ export default function App() {
               <div className="product-price-elegant">{selectedProduct.price}</div>
               <div className="separator-diamond"><DiamondIcon /></div>
               
-              <p className="product-desc-elegant">
-                Cette création est confectionnée avec un tissu de haute qualité et une broderie artisanale réalisée à la main.
-                Son design élégant convient aussi bien aux occasions spéciales qu'au quotidien.
+              <p className="product-desc-elegant" style={{ whiteSpace: 'pre-wrap' }}>
+                {selectedProduct.description}
               </p>
 
               <div className="product-features-list">
@@ -221,7 +182,7 @@ export default function App() {
               <button className="slider-btn-small left"><ArrowLeftIcon /></button>
               {selectedCategory.products.map((prod, idx) => (
                 <div className="similar-card" key={idx} onClick={() => handleProductClick(prod, selectedCategory)}>
-                  <img src={`/images/${prod.img}`} alt={prod.title} />
+                  <img src={prod.img} alt={prod.title} />
                   <div className="similar-info">
                     <h5>{prod.title}</h5>
                     <div className="similar-bottom">
@@ -257,7 +218,7 @@ export default function App() {
           <div className="category-grid">
             {selectedCategory.products.map((prod, idx) => (
               <div className="category-product-card" key={idx} onClick={() => handleProductClick(prod, selectedCategory)}>
-                <img src={`/images/${prod.img}`} alt={prod.title} />
+                <img src={prod.img} alt={prod.title} />
                 <div className="category-product-info">
                   <h5>{prod.title}</h5>
                   <div className="category-product-bottom">
@@ -275,14 +236,14 @@ export default function App() {
         <>
           <header className="hero" id="accueil">
             <div className="hero-content">
-              <h1>Les plus belles <span className="serif">broderies artisanales</span></h1>
-              <p>Découvrez nos créations uniques et faites la différence avec un travail de qualité.</p>
+              <h1>{settingsData.hero_heading}</h1>
+              <p>{settingsData.hero_subheading}</p>
               <button className="btn-primary" style={{ padding: '12px 24px', fontSize: '16px' }} onClick={(e) => scrollToSection(e, 'creations')}>
                 Découvrir nos créations <ArrowRightIcon />
               </button>
             </div>
             <div className="hero-image">
-              <img src="/images/hero_embroidery_1785360243227.png" alt="Broderie artisanale" />
+              <img src={settingsData.hero_image} alt="Broderie artisanale" />
             </div>
           </header>
 
@@ -317,7 +278,7 @@ export default function App() {
             <div className="creations-grid">
               {categoriesData.map((cat, index) => (
                 <div className="creation-card" key={index} onClick={() => handleCategoryClick(cat)}>
-                  <img src={`/images/${cat.img}`} alt={cat.title} className="creation-img" style={{ cursor: 'pointer' }} />
+                  <img src={cat.img} alt={cat.title} className="creation-img" style={{ cursor: 'pointer' }} />
                   <div className="creation-info" style={{ cursor: 'pointer' }}>
                     <h4>{cat.title}</h4>
                     <button className="btn-icon"><ArrowRightIcon /></button>
@@ -330,11 +291,11 @@ export default function App() {
           <section className="cta" id="sur-mesure">
             <div className="cta-left">
               <div className="cta-icon">
-                <img src="/images/spool-image.jpg" alt="Sur mesure" style={{ width: '60px', height: '60px', objectFit: 'cover', borderRadius: '12px' }} />
+                <img src={settingsData.cta_image} alt="Sur mesure" style={{ width: '60px', height: '60px', objectFit: 'cover', borderRadius: '12px' }} />
               </div>
               <div className="cta-text">
-                <h2>Une idée ? Un projet ?</h2>
-                <p>Nous réalisons vos broderies sur mesure, selon vos envies.</p>
+                <h2>{settingsData.cta_heading}</h2>
+                <p>{settingsData.cta_text}</p>
               </div>
             </div>
             <button className="btn-primary" style={{ padding: '12px 24px', fontSize: '16px' }} onClick={(e) => openWhatsApp(e, 'Bonjour, je souhaite réaliser un projet de broderie sur mesure.')}>
@@ -387,9 +348,9 @@ export default function App() {
             </div>
             <p className="footer-desc">Votre boutique spécialisée en broderie artisanale, pour des créations uniques et élégantes.</p>
             <div className="footer-socials">
-              <a href="https://wa.me/212694569123" target="_blank" rel="noreferrer" style={{color: 'inherit'}}><WhatsAppIcon /></a>
-              <a href="https://instagram.com/broderieouazzane" target="_blank" rel="noreferrer" style={{color: 'inherit'}}><InstagramIcon /></a>
-              <a href="https://tiktok.com/@broderieouazzane" target="_blank" rel="noreferrer" style={{color: 'inherit'}}><TikTokIcon /></a>
+              <a href={`https://wa.me/${settingsData.whatsapp_number}`} target="_blank" rel="noreferrer" style={{color: 'inherit'}}><WhatsAppIcon /></a>
+              <a href={settingsData.instagram_link} target="_blank" rel="noreferrer" style={{color: 'inherit'}}><InstagramIcon /></a>
+              <a href={settingsData.tiktok_link} target="_blank" rel="noreferrer" style={{color: 'inherit'}}><TikTokIcon /></a>
             </div>
           </div>
           
@@ -407,22 +368,23 @@ export default function App() {
           <div className="footer-col">
             <h3>Contact</h3>
             <div className="footer-contact-item">
-              <a href="https://instagram.com/broderieouazzane" target="_blank" rel="noreferrer" style={{display: 'flex', alignItems: 'center', gap: '10px', color: 'inherit'}}>
-                <InstagramIcon /> <span>Broderieouazzane</span>
+              <a href={settingsData.instagram_link} target="_blank" rel="noreferrer" style={{display: 'flex', alignItems: 'center', gap: '10px', color: 'inherit'}}>
+                <InstagramIcon /> <span>{settingsData.instagram_handle}</span>
               </a>
             </div>
             <div className="footer-contact-item">
-              <a href="https://tiktok.com/@broderieouazzane" target="_blank" rel="noreferrer" style={{display: 'flex', alignItems: 'center', gap: '10px', color: 'inherit'}}>
-                <TikTokIcon /> <span>@broderieouazzane</span>
+              <a href={settingsData.tiktok_link} target="_blank" rel="noreferrer" style={{display: 'flex', alignItems: 'center', gap: '10px', color: 'inherit'}}>
+                <TikTokIcon /> <span>{settingsData.tiktok_handle}</span>
               </a>
             </div>
             <div className="footer-contact-item">
-              <a href="https://wa.me/212694569123" target="_blank" rel="noreferrer" style={{display: 'flex', alignItems: 'center', gap: '10px', color: 'inherit'}}>
-                <WhatsAppOfficialIcon /> <span>0694569123</span>
+              <a href={`https://wa.me/${settingsData.whatsapp_number}`} target="_blank" rel="noreferrer" style={{display: 'flex', alignItems: 'center', gap: '10px', color: 'inherit'}}>
+                <WhatsAppOfficialIcon /> <span>{settingsData.phone_number}</span>
               </a>
             </div>
             <div className="footer-contact-item">
-              <MapPinIcon /> <span>50030 Ouazzane, Maroc</span>
+              <MapPinIcon /> <span>{settingsData.location}</span>
+              <a href={settingsData.maps_link} target="_blank" rel="noreferrer" title="Voir sur Google Maps" style={{ display: 'inline-flex', alignItems: 'center', marginLeft: '8px', opacity: 0.7 }}><FiExternalLink size={14} /></a>
             </div>
           </div>
         </div>
